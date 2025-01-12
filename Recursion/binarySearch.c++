@@ -10,15 +10,21 @@ int  findTarget(int arr[], int start, int end, int target)
    if(start > end ){
      return -1;
    }
-int mid = start + (end-start/2);
+
+   //processing
+   int mid = start + (end-start/2);
+
+   // Recursive Calls
    if(arr[mid] == target){
    return mid;
    }
 
    else if(arr[mid] > target){
+     // going right
       return findTarget(arr, start, end-1 , target);
    }
    else if(arr[mid] < target){
+    // going left
     return  findTarget(arr,mid-1, end, target);
    }
 
@@ -33,7 +39,12 @@ int main()
     int start = 0;
     int end = size - 1;
     int target = 4;
-    cout <<"Target is at a index :"<< findTarget(arr, start, end, target);
 
+  int ans = findTarget(arr, start, end, target);
+
+    if(ans != -1){
+    cout <<"Target is at a index :"<< ans ;
+    }
+     else  cout << "Target not Found";
     return 0;
 }
