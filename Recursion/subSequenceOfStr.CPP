@@ -5,36 +5,40 @@ if size pf string is n then no. of subsequences will be 2^n
  
  so in this ques ek pattern use hoga called include , exclude and ye pattern future me bhi bhot help karega for question solving 
 */
-// #include <iostream>
-// using namespace std;
-// void subSequences(string str, string output,int index){
+#include <iostream>
+using namespace std;
+void subSequences(string str, string output,int index){
  
-// // base case
-//  if(index >= str.length()){
-//    cout << "->" << output << endl;
-//     return ;
-//  }
+// base case
+ if(index >= str.length()){
+   cout << "->" << output << endl;
+    return ;
+ }
 
 
-//   // exclude
-//   subSequences(str,output,index+1);
+  // exclude
+  subSequences(str,output,index+1);
 
-//   // include
-//   output.push_back(str[index]);
-//   subSequences(str,output,index+1);
+  // include
+  output.push_back(str[index]);
+  subSequences(str,output,index+1);
 
-// }
+}
 
-// int main(){
-//     string  str = "abc";
-//     string output = "";
+int main(){
+    string  str = "abc";
+    string output = "";
 
-//     subSequences(str, output, 0);
+    subSequences(str, output, 0);
 
 
-//     return 0;
-// }
+    return 0;
+}
 
+
+
+// by adding output into vector
+/*
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -63,7 +67,7 @@ int main(){
     vector<string>ans;
     subSequences(str, output, 0,ans);
   
-
+ // prnting values of vector
  for(string val : ans){
  cout  << "->" << val << endl ;
  }
@@ -71,3 +75,5 @@ int main(){
 
     return 0;
 }
+
+*/

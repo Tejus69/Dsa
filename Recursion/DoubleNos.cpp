@@ -1,5 +1,5 @@
 // double every no. from array 
-// find maximum number in array by recursion
+
 #include<iostream>
 
 using namespace std;
