@@ -1,5 +1,5 @@
 /*
- its also a leetcode Question
+ its also a leetcode Question no. 242 
  in this ques we have string lets say ex. "rat"  then "tra", "art", etc. will be its anagram
  so anagram is the shuffling the charcters of string and put it into a random order 
 
@@ -14,9 +14,12 @@ Approach 2:
        how to make frequency table : 
        range of ascii values are till 256 so ill create a array of size 256 then ill 
        travarse a string  and add count of characters into array index of his ascii value 
-       then increase the count according to occurance of character ill apply this method on both strings
-       then match the O/P
- */
+       then increase the count according to occurance of character then for string b ill 
+       decreasing count of array then again array all ele will be zero 
+
+
+       this question solved by Approach 2 
+       */
 
 #include <iostream>
 #include<string>
